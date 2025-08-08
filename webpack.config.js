@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
@@ -21,11 +22,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-    ],
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
   },
   devServer: {
     static: {
